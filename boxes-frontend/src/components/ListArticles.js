@@ -42,8 +42,6 @@ const ListArticles = () => {
             <th>Title</th>
             <th>Description</th>
             <th>Size</th>
-            <th>Download</th>
-            <th>Delete</th>
           </tr>
         </thead>
         <tbody>
