@@ -4,7 +4,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 
 
 </span>
@@ -150,4 +149,3 @@ Project Link: [https://github.com/AshMagill/boxes](https://github.com/AshMagill/
 [stars-url]: https://github.com/AshMagill/pern-art-gallery/stargazers
 [issues-shield]: https://img.shields.io/github/issues/AshMagill/boxes.svg?style=for-the-badge
 [issues-url]: https://github.com/AshMagill/pern-art-gallery/issues
-[license-shield]: https://img.shields.io/github/license/AshMagill/boxes.svg?style=for-the-badge
