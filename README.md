@@ -15,7 +15,7 @@
   <h3 align="center">CSV Boxes</h3>
 
   <p align="center">
-    A simple web page for displaying images, it comes with a CMS and a Server that uses basic auth middleware to protect CRUD operations
+    A simple App for viewing and uploading .csv files, it comes with a Client and a Server. 
     <br />
     <!--<a href="https://raw.githubusercontent.com/AshMagill/Readme/main/images/Pern%20C4%20Diagram.png?token=AQZ3OBXAICRLYNCWHRXRGITAYA4OM"><strong>C4 Diagram »</strong></a>-->
     <!--<br />-->
@@ -58,22 +58,22 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-A while back I made my brother a simple one pager to showcase his artwork, shown here:
+I have managed to create basic crud operations in the server and I can access them with fetch requests in the browser.
 
-<a href="https://tylarwaterman.co.nz">tylarwaterman.co.nz</a>
+I used Multer to store the csv files in a folder on the server, the files are refereced in mongo and they can be downloaded from the client side individually as they are mapped.
 
-Currenty I have to manually add images to his repo whenever he creates new artwork. Im working on this PERN stack version of it so he can upload his images via CMS whenever he wants. Here is a link to a C4 diagram for a technical overview:
-
-<a href="https://raw.githubusercontent.com/AshMagill/pern-art-gallery/main/c4.png"><p>C4 diagram link</p></a> 
+I have made the client simple and tidy by using bootstrap, im using state to update the webpage whenever any tables are edited. 
 
 
 ### Built With
-* [Postgres](https://www.postgresql.org/)
+* [MongoDB](https://www.postgresql.org/)
 * [Express](https://expressjs.com/)
 * [React](https://reactjs.org/)
 * [NodeJS](https://nodejs.org/en/)
 * [Bootstrap](https://getbootstrap.com/)
 * [Docker](https://hub.docker.com/_/postgres)
+* [Multer](https://hub.docker.com/_/postgres)
+
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -88,81 +88,38 @@ To get a local copy up and running follow these simple steps.
 * Docker (to run postgres)
   https://docs.docker.com/engine/install/
 
-* A database manager (I use Beekeeper)
-  https://docs.beekeeperstudio.io/installation
-
 ### Installation
 
 **I'm working on getting docker-compose set up at the moment, but this will work for now** 
 <br>
 
-(Also its never a good idea to share your postgres credentials on github if your repo is being deployed)
+(Also its never a good idea to share your .env credentials on github if your repo is being deployed)
 
 1. Clone the repo
    ```sh
-   git clone git@github.com:AshMagill/pern-art-gallery.git
+   git clone git@github.com:AshMagill/boxes.git
    ```
-2. Individually CD into server, cms, website, and install npm packages 
+2. Individually CD into server and client, and install npm packages 
    ```sh
    npm install
    ```
-3. Spin up postgres with docker using your terminal
+3. Spin up MongoDB with Docker using your terminal
    ```sh
    docker run -d --name  cms-server -p 5432:5432 -e POSTGRES_PASSWORD=password -v cms-server:/var/lib/postgresql/data -d postgres
    ```
-3. In your database manager, connect to the database with these credentials
+3. In your database manager, you can connect to the database with this URI (again I dont usually share this stuff online)
    ```
-   Connection Type: Postgres
-   Host: Localhost
-   Port: 5432
-   User: postgres
-   Password: password
-   Default Database: postgres
+MONGO_URI=mongodb://mongoadmin:secret@localhost:27888/?authSource=admin
    ```
-7. In your database manager, install uuid-ossp extension
+4. Individually CD into server, cms, website, and start them
    ```
-   create extension if not exists "uuid-ossp";
    ```
-6. In your database manager, create the user table and the article table
-   ```sh
-   CREATE TABLE users (
-   user_id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
-   user_name VARCHAR(255) NOT NULL,
-   user_email VARCHAR(255) NOT NULL,
-   user_password VARCHAR(255) NOT NULL
-   )
-   ```
-   ```sh
-   CREATE table images(
-   id SERIAL NOT NULL PRIMARY KEY,
-   title VARCHAR(255),
-   description VARCHAR(255),
-   filename TEXT UNIQUE,
-   filepath TEXT,
-   mimetype TEXT,
-   size BIGINT
-   )
-   ```
-8. In your database manager, insert a user
-   ```
-   INSERT INTO users (user_name, user_email, user_password)
-   VALUES('user','user@email.com','$argon2i$v=19$m=4096,t=3,p=1$DDy+ddirjxRcDR46CUcVyg$axkNtlqYQSmfUiaUDGQbEK6Mn6AsqOGEKeL8TBpQ23U')
-   ```
-2. Individually CD into server, cms, website, and start them
-   <br>
-   (you are running two clients, so when npm asks to run the second one in another port, say yes)
-   ```sh
-   npm start
-   ```
-3. Start up your browser and look up the localhosts the two clients are on
+5. Start up your browser and look up the localhosts for the client
    ```
    localhost:3000
-   localhost:3001
    ```
-4. In the cms, log in with the user email and password we made earlier
+6. For now the file sizes are limited, so make sure you use a small .csv file
    ```
-   email: email@email.com
-   password: password
    ```
 <!-- CONTRIBUTING -->
 ## Contributing
