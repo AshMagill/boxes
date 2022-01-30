@@ -3,20 +3,11 @@ import React, { Fragment, useState, useEffect } from 'react';
 const ListArticles = () => {
   const [article, setArticle] = useState([]);
 
+  // delete by id
   async function deleteArticle(id) {
     try {
       await fetch(`http://localhost:5000/csvs/${id}`, {
         method: 'DELETE',
-      });
-    } catch (err) {
-      console.error(err.message);
-    }
-  }
-
-  async function getArticle(id) {
-    try {
-      await fetch(`http://localhost:5000/csvs/${id}`, {
-        method: 'GET',
       });
     } catch (err) {
       console.error(err.message);

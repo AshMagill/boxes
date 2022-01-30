@@ -57,7 +57,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-I used Multer to store the csv files in a folder on the server, the files are refereced in mongo and they can be downloaded from the client side individually as they are mapped.
+I used Multer to store the csv files in a folder on the server, the files are referenced in mongo and they can be downloaded from the client side individually as they are mapped.
 
 I have made the client simple and tidy by using bootstrap, I'm using state to update the webpage whenever any tables are edited. 
 

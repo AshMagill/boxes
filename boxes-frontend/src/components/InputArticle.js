@@ -11,9 +11,7 @@ const InputArticle = () => {
     data.append('file', file);
     data.append('description', description);
 
-    Axios.post('http://localhost:5000/csvs/add', data, {
-      headers: { token: localStorage.token },
-    })
+    Axios.post('http://localhost:5000/csvs/add', data)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
     window.location = '/';
@@ -21,7 +19,7 @@ const InputArticle = () => {
 
   return (
     <div>
-      <h3 className='text-center mt-5'>Create File</h3>
+      <h2 className='text-center mt-5'>Create File</h2>
       <form action='#'>
         <div className='flex'>
           <label htmlFor='title'>Title</label>

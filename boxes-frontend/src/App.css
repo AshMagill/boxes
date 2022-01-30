@@ -28,6 +28,20 @@
   color: #61dafb;
 }
 
+/*remove ugly blue text and underline in links*/
+
+a {
+  color: #fff;
+}
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.table-striped {
+  margin-bottom: 5rem;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
