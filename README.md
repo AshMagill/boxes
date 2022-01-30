@@ -108,17 +108,19 @@ To get a local copy up and running follow these simple steps.
    docker run -d --name  cms-server -p 5432:5432 -e POSTGRES_PASSWORD=password -v cms-server:/var/lib/postgresql/data -d postgres
    ```
 3. In your database manager, you can connect to the database with this URI (again I dont usually share this stuff online)
-   ```MONGO_URI=mongodb://mongoadmin:secret@localhost:27888/?authSource=admin
+   ```sh
+   MONGO_URI=mongodb://mongoadmin:secret@localhost:27888/?authSource=admin
    ```
 4. Individually CD into server, cms, website, and start them
+   ```sh
+   npm start
    ```
 5. Start up your browser and look up the localhosts for the client
-   ```
+   ```sh
    localhost:3000
    ```
 6. For now the file sizes are limited, so make sure you use a small .csv file
-   ```
-   ```
+
 <!-- CONTRIBUTING -->
 ## Contributing
 
