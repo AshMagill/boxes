@@ -21,9 +21,9 @@
     <br />
     <!--<a href="https://github.com/AshMagill/pern-art-gallery">View Demo</a>-->
     <!--·-->
-    <a href="https://github.com/AshMagill/pern-art-gallery/issues">Report Bug</a>
+    <a href="https://github.com/AshMagill/boxes/issues">Report Bug</a>
     ·
-    <a href="https://github.com/AshMagill/pern-art-gallery/issues">Request Feature</a>
+    <a href="https://github.com/AshMagill/boxes/issues">Request Feature</a>
   </p>
 </p>
 
