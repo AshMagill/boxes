@@ -19,7 +19,7 @@
     <!--<a href="https://raw.githubusercontent.com/AshMagill/Readme/main/images/Pern%20C4%20Diagram.png?token=AQZ3OBXAICRLYNCWHRXRGITAYA4OM"><strong>C4 Diagram »</strong></a>-->
     <!--<br />-->
     <br />
-    <!--<a href="https://github.com/AshMagill/pern-art-gallery">View Demo</a>-->
+    <!--<a href="https://github.com/AshMagill/boxes">View Demo</a>-->
     <!--·-->
     <a href="https://github.com/AshMagill/boxes/issues">Report Bug</a>
     ·
@@ -142,10 +142,10 @@ Project Link - [https://github.com/AshMagill/boxes](https://github.com/AshMagill
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/AshMagill/boxes.svg?style=for-the-badge
-[contributors-url]: https://github.com/AshMagill/pern-art-gallery/graphs/contributors
+[contributors-url]: https://github.com/AshMagill/boxes/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/AshMagill/boxes.svg?style=for-the-badge
-[forks-url]: https://github.com/AshMagill/pern-art-gallery/network/members
+[forks-url]: https://github.com/AshMagill/boxes/network/members
 [stars-shield]: https://img.shields.io/github/stars/AshMagill/boxes.svg?style=for-the-badge
-[stars-url]: https://github.com/AshMagill/pern-art-gallery/stargazers
+[stars-url]: https://github.com/AshMagill/boxes/stargazers
 [issues-shield]: https://img.shields.io/github/issues/AshMagill/boxes.svg?style=for-the-badge
-[issues-url]: https://github.com/AshMagill/pern-art-gallery/issues
+[issues-url]: https://github.com/AshMagill/boxes/issues

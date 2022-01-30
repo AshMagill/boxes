@@ -25,6 +25,7 @@ const imageUpload = multer({
 
 // create csv
 router.post('/add', imageUpload.single('file'), async (req, res) => {
+  //destructuring for the req body and file properties
   const { filename, mimetype, size } = req.file;
   const { description, title } = req.body;
   const filepath = req.file.path;

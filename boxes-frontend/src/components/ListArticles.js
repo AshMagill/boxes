@@ -24,6 +24,13 @@ const ListArticles = () => {
   useEffect(() => {
     getArticles();
   }, []);
+
+  //map the csvs and thier properties
+
+  //'/static' is a route for getting static files from the server
+  //folder 'csvs', referenced by the file name recieved
+
+  // window is reloaded on delete click (can be refractored later)
   return (
     <Fragment>
       <h2 className='text-center'>CSV Files</h2>

@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
+//constraints for entering data into the mongodb database
 const exerciseSchema = new Schema({
   title: { type: String, required: true },
   description: { type: String, required: true },

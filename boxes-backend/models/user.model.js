@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+// the beginnings of auth, see if I get there
+
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema(
