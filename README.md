@@ -66,13 +66,13 @@ I have made the client simple and tidy by using bootstrap, im using state to upd
 
 
 ### Built With
-* [MongoDB](https://www.postgresql.org/)
+* [MongoDB](https://www.mongodb.org/)
 * [Express](https://expressjs.com/)
 * [React](https://reactjs.org/)
 * [NodeJS](https://nodejs.org/en/)
 * [Bootstrap](https://getbootstrap.com/)
 * [Docker](https://hub.docker.com/_/postgres)
-* [Multer](https://hub.docker.com/_/postgres)
+* [Multer](https://www.npmjs.com/package/multer)
 
 
 <!-- GETTING STARTED -->
@@ -90,10 +90,9 @@ To get a local copy up and running follow these simple steps.
 
 ### Installation
 
-**I'm working on getting docker-compose set up at the moment, but this will work for now** 
 <br>
 
-(Also its never a good idea to share your .env credentials on github if your repo is being deployed)
+(I know its never a good idea to share your .env credentials on github if your repo is being deployed, I have included it to speed up installation)
 
 1. Clone the repo
    ```sh
@@ -111,7 +110,7 @@ To get a local copy up and running follow these simple steps.
    ```sh
    MONGO_URI=mongodb://mongoadmin:secret@localhost:27888/?authSource=admin
    ```
-4. Individually CD into server, cms, website, and start them
+4. Individually CD into server and client, and start them
    ```sh
    npm start
    ```
