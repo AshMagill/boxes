@@ -12,7 +12,7 @@
 <br />
 <p align="center">
 
-  <h3 align="center">CSV Boxes</h3>
+  <h1 align="center">CSV Boxes</h1>
 
   <p align="center">
     A simple App for viewing and uploading .csv files, it comes with a Client and a Server. 
@@ -140,17 +140,17 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Ash Magill - ashmagillnewzealand@gmail.com
 
-Project Link: [https://github.com/AshMagill/pern-art-gallery](https://github.com/AshMagill/pern-art-gallery)
+Project Link: [https://github.com/AshMagill/boxes](https://github.com/AshMagill/boxes)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/AshMagill/pern-art-gallery.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/AshMagill/boxes.svg?style=for-the-badge
 [contributors-url]: https://github.com/AshMagill/pern-art-gallery/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/AshMagill/pern-art-gallery.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/AshMagill/boxes.svg?style=for-the-badge
 [forks-url]: https://github.com/AshMagill/pern-art-gallery/network/members
-[stars-shield]: https://img.shields.io/github/stars/AshMagill/pern-art-gallery.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/AshMagill/boxes.svg?style=for-the-badge
 [stars-url]: https://github.com/AshMagill/pern-art-gallery/stargazers
-[issues-shield]: https://img.shields.io/github/issues/AshMagill/pern-art-gallery.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/AshMagill/boxes.svg?style=for-the-badge
 [issues-url]: https://github.com/AshMagill/pern-art-gallery/issues
-[license-shield]: https://img.shields.io/github/license/AshMagill/pern-art-gallery.svg?style=for-the-badge
-[license-url]: https://github.com/AshMagill/pern-art-gallery/blob/master/LICENSE.txt
+[license-shield]: https://img.shields.io/github/license/AshMagill/boxes.svg?style=for-the-badge
+[license-url]: https://github.com/AshMagill/boxes/blob/master/LICENSE.txt
