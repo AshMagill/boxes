@@ -151,4 +151,3 @@ Project Link: [https://github.com/AshMagill/boxes](https://github.com/AshMagill/
 [issues-shield]: https://img.shields.io/github/issues/AshMagill/boxes.svg?style=for-the-badge
 [issues-url]: https://github.com/AshMagill/pern-art-gallery/issues
 [license-shield]: https://img.shields.io/github/license/AshMagill/boxes.svg?style=for-the-badge
-[license-url]: https://github.com/AshMagill/boxes/blob/master/LICENSE.txt
