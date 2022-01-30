@@ -58,8 +58,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-I have managed to create basic crud operations in the server and I can access them with fetch requests in the browser.
-
 I used Multer to store the csv files in a folder on the server, the files are refereced in mongo and they can be downloaded from the client side individually as they are mapped.
 
 I have made the client simple and tidy by using bootstrap, I'm using state to update the webpage whenever any tables are edited. 
@@ -85,7 +83,7 @@ To get a local copy up and running follow these simple steps.
 * npm 
   https://www.npmjs.com/get-npm
 
-* Docker (to run postgres)
+* Docker (to run mongodb)
   https://docs.docker.com/engine/install/
 
 ### Installation
