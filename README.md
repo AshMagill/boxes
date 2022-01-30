@@ -62,7 +62,7 @@ I have managed to create basic crud operations in the server and I can access th
 
 I used Multer to store the csv files in a folder on the server, the files are refereced in mongo and they can be downloaded from the client side individually as they are mapped.
 
-I have made the client simple and tidy by using bootstrap, im using state to update the webpage whenever any tables are edited. 
+I have made the client simple and tidy by using bootstrap, I'm using state to update the webpage whenever any tables are edited. 
 
 
 ### Built With
@@ -90,9 +90,7 @@ To get a local copy up and running follow these simple steps.
 
 ### Installation
 
-<br>
-
-(I know its never a good idea to share your .env credentials on github if your repo is being deployed, I have included it to speed up installation)
+I know its never a good idea to share your .env credentials on github if your repo is being deployed, I have included it to speed up installation
 
 1. Clone the repo
    ```sh
@@ -104,7 +102,8 @@ To get a local copy up and running follow these simple steps.
    ```
 3. Spin up MongoDB with Docker using your terminal
    ```sh
-   docker run -d --name  cms-server -p 5432:5432 -e POSTGRES_PASSWORD=password -v cms-server:/var/lib/postgresql/data -d postgres
+   docker run -d  --name mongo-on-docker  -p 27888:27017 -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=secret mongo
+
    ```
 3. In your database manager, you can connect to the database with this URI (again I dont usually share this stuff online)
    ```sh
