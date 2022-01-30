@@ -114,7 +114,7 @@ I know its never a good idea to share your .env credentials on github if your re
    ```sh
    localhost:3000
    ```
-6. For now the file sizes are limited, so make sure you use a small .csv file
+6. The file name lengths are limited, so make sure you use a small file name
 
 <!-- CONTRIBUTING -->
 ## Contributing

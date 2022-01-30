@@ -21,6 +21,13 @@ const ListArticles = () => {
     setArticle(articleArray);
   }
 
+  function bytesToSize(bytes) {
+    var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+    if (bytes == 0) return '0 Byte';
+    var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
+    return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i];
+  }
+
   useEffect(() => {
     getArticles();
   }, []);
@@ -47,7 +54,7 @@ const ListArticles = () => {
             <tr key={item._id}>
               <td className='pl-2'>{item.title}</td>
               <td>{item.description}</td>
-              <td>{item.size}</td>
+              <td>{bytesToSize(item.size)}</td>
               <td>
                 <button className='btn btn-success'>
                   <a href={`http://localhost:5000/static/${item.filename}`}>

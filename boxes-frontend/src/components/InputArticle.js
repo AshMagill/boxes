@@ -32,6 +32,7 @@ const InputArticle = () => {
         <div className='flex'>
           <label htmlFor='title'>Title</label>
           <input
+            required
             className='form-control'
             type='text'
             id='title'
@@ -44,6 +45,7 @@ const InputArticle = () => {
         <div className='flex'>
           <label htmlFor='description'>Description</label>
           <input
+            required
             className='form-control'
             type='text'
             id='description'
@@ -56,6 +58,7 @@ const InputArticle = () => {
         <div className='flex'>
           <label htmlFor='file'>File</label>
           <input
+            required
             className='form-control'
             type='file'
             id='file'
