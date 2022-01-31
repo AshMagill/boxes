@@ -13,12 +13,9 @@ router.use('/static', express.static('csvs'));
 // get all csvs
 
 router.get('/', (req, res) => {
-  try {
-    Csv.find();
-    res.json(csvs);
-  } catch (err) {
-    res.status(400).json('Error: ' + err);
-  }
+  Csv.find()
+    .then((csvs) => res.json(csvs))
+    .catch((err) => res.status(400).json('Error: ' + err));
 });
 
 // create multer object for csv file storage
@@ -60,12 +57,9 @@ router.post('/add', imageUpload.single('file'), async (req, res) => {
 
 //delete csv by id
 router.delete('/:id', (req, res) => {
-  try {
-    Csv.findByIdAndDelete(req.params.id);
-    res.json('Csv deleted');
-  } catch (err) {
-    res.status(400).json('Error: ' + err);
-  }
+  Csv.findByIdAndDelete(req.params.id)
+    .then(() => res.json('Csv deleted'))
+    .catch((err) => res.status(400).json('Error: ' + err));
 });
 
 module.exports = router;

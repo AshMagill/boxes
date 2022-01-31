@@ -96,11 +96,6 @@ const ListArticles = () => {
                     Download
                   </a>
                 </button>
-                <button className='btn btn-success'>
-                  <a href={`http://localhost:5000/static/${item.filename}`}>
-                    View
-                  </a>
-                </button>
               </td>
               <td>
                 <button
