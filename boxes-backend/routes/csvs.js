@@ -18,7 +18,7 @@ const imageUpload = multer({
       cb(null, 'csvs/');
     },
     filename: function (req, file, cb) {
-      cb(null, new Date().valueOf() + '_' + file.originalname);
+      cb(null, file.originalname);
     },
   }),
 });
