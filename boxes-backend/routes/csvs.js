@@ -7,7 +7,7 @@ const Csv = require('../models/csv.model');
 // get all csvs
 router.get('/', (req, res) => {
   Csv.find()
-    .then((exercises) => res.json(exercises))
+    .then((csvs) => res.json(csvs))
     .catch((err) => res.status(400).json('Error: ' + err));
 });
 

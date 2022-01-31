@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 //constraints for entering data into the mongodb database
-const exerciseSchema = new Schema({
+const csvSchema = new Schema({
   title: { type: String, required: true },
   description: { type: String, required: true },
   filename: { type: String, required: true },
@@ -12,6 +12,6 @@ const exerciseSchema = new Schema({
   size: { type: Number, required: true },
 });
 
-const Exercise = mongoose.model('Exercise', exerciseSchema);
+const Csvs = mongoose.model('Csvs', csvSchema);
 
-module.exports = Exercise;
+module.exports = Csvs;
