@@ -25,6 +25,7 @@ const InputArticle = () => {
   //re-render
 
   //only accept .csv files
+
   return (
     <div>
       <h2 className='text-center mt-5'>Create File</h2>
@@ -70,7 +71,11 @@ const InputArticle = () => {
           />
         </div>
       </form>
-      <button className='btn btn-success mt-4' onClick={send}>
+      <button
+        className='btn btn-success mt-4'
+        onClick={send}
+        disabled={!file || !description || !title}
+      >
         Send
       </button>
     </div>
