@@ -50,3 +50,13 @@ a:hover {
     transform: rotate(360deg);
   }
 }
+
+/*adjust the table headers and data*/
+
+table {
+  width: 100%;
+}
+
+td {
+  width: 16.6%;
+}

@@ -1,5 +1,4 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import Papa from 'papaparse';
 
 const ListArticles = () => {
   const [article, setArticle] = useState([]);
@@ -39,29 +38,16 @@ const ListArticles = () => {
   }, []);
 
   //fetch the csv file, parse it to json object array and map it
+  const [text, setText] = useState();
 
-  const fetchCsv = async () => {
-    return fetch(`http://localhost:5000/static/SampleCSVFile_2kb.csv
-`).then(function (response) {
-      let reader = response.body.getReader();
-      let decoder = new TextDecoder('utf-8');
-
-      return reader.read().then(function (result) {
-        return decoder.decode(result.value);
+  const load = function (filename) {
+    fetch(`http://localhost:5000/static/${filename}`)
+      .then((response) => response.text())
+      .then((responseText) => {
+        setText(responseText);
       });
-    });
   };
 
-  //async function getCsvData() {
-  //let csvData = await fetchCsv();
-  //let results = Papa.parse(csvData, { header: true });
-  //return results;
-  //}
-
-  //let csvDataArray = [];
-  //getCsvData().then((value) => csvDataArray.push(JSON.stringify(value)));
-
-  //console.log(csvDataArray);
   ////take the first object in the array and map them to a list of table headers (colums)
   ////take all the other objects and map them to thier rows
 
@@ -81,6 +67,9 @@ const ListArticles = () => {
             <th>Title</th>
             <th>Description</th>
             <th>Size</th>
+            <th>View</th>
+            <th>Download</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody>
@@ -89,6 +78,53 @@ const ListArticles = () => {
               <td className='pl-2'>{item.title}</td>
               <td>{item.description}</td>
               <td>{bytesToSize(item.size)}</td>
+              <td>
+                <button
+                  type='button'
+                  className='btn btn-success'
+                  data-toggle='modal'
+                  data-target='#exampleModal'
+                  onClick={load(item.filename)}
+                >
+                  View
+                </button>
+                <div
+                  className='modal fade'
+                  id='exampleModal'
+                  tabIndex='-1'
+                  role='dialog'
+                  aria-labelledby='exampleModalLabel'
+                  aria-hidden='true'
+                >
+                  <div className='modal-dialog' role='document'>
+                    <div className='modal-content'>
+                      <div className='modal-header'>
+                        <h5 className='modal-title' id='exampleModalLabel'>
+                          Modal title
+                        </h5>
+                        <button
+                          type='button'
+                          className='close'
+                          data-dismiss='modal'
+                          aria-label='Close'
+                        >
+                          <span aria-hidden='true'>&times;</span>
+                        </button>
+                      </div>
+                      <div className='modal-body'>{text}</div>
+                      <div className='modal-footer'>
+                        <button
+                          type='button'
+                          className='btn btn-secondary'
+                          data-dismiss='modal'
+                        >
+                          Close
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
               <td>
                 <button className='btn btn-success'>
                   <a href={`http://localhost:5000/static/${item.filename}`}>
