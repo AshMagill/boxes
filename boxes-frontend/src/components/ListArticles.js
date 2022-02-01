@@ -40,18 +40,17 @@ const ListArticles = () => {
 
   //fetch the csv file, parse it to json object array and map it
 
-  //const fetchCsv = async () => {
-  //return fetch(`http://localhost:5000/static/hi.csv`).then(function (
-  //response
-  //) {
-  //let reader = response.body.getReader();
-  //let decoder = new TextDecoder('utf-8');
+  const fetchCsv = async () => {
+    return fetch(`http://localhost:5000/static/SampleCSVFile_2kb.csv
+`).then(function (response) {
+      let reader = response.body.getReader();
+      let decoder = new TextDecoder('utf-8');
 
-  //return reader.read().then(function (result) {
-  //return decoder.decode(result.value);
-  //});
-  //});
-  //};
+      return reader.read().then(function (result) {
+        return decoder.decode(result.value);
+      });
+    });
+  };
 
   //async function getCsvData() {
   //let csvData = await fetchCsv();

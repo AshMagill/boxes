@@ -14,6 +14,10 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 5000;
 
+// this is the static route for serving files
+
+app.use('/static', express.static('csvs'));
+
 app.use(cors());
 app.use(express.json());
 

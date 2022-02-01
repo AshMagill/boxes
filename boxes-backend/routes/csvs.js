@@ -6,10 +6,6 @@ const multer = require('multer');
 
 const Csv = require('../models/csv.model');
 
-// this is the static route for serving files
-
-router.use('/static', express.static('csvs'));
-
 // get all csvs
 
 router.get('/', (req, res) => {
