@@ -161,7 +161,7 @@ const ListArticles = () => {
               </td>
               <td>
                 <button
-                  className='btn btn-danger'
+                  className='btn btn-danger '
                   onClick={() =>
                     deleteArticle(item._id) && window.location.reload()
                   }

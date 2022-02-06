@@ -62,10 +62,25 @@ const InputArticle = () => {
                 </button>
               </div>
               <div className='modal-body'>
-                <form>
+                <form className='text-left'>
                   <div className='form-group'>
-                    <label htmlFor='title'>Title</label>
+                    <label>File</label>
                     <input
+                      required
+                      className='form-control'
+                      type='file'
+                      id='file'
+                      accept='.csv'
+                      onChange={(event) => {
+                        const file = event.target.files[0];
+                        setFile(file);
+                      }}
+                    />
+                  </div>
+                  <div className='form-group'>
+                    <label>Title</label>
+                    <input
+                      placeholder='Title'
                       required
                       className='form-control'
                       type='text'
@@ -77,8 +92,9 @@ const InputArticle = () => {
                     />
                   </div>
                   <div className='form-group'>
-                    <label htmlFor='description'>Description</label>
+                    <label>Description</label>
                     <input
+                      placeholder='Description'
                       required
                       className='form-control'
                       type='text'
@@ -88,20 +104,6 @@ const InputArticle = () => {
                         setDescription(value);
                       }}
                     />
-                    <div className='form-group'>
-                      <label htmlFor='file'>File</label>
-                      <input
-                        required
-                        className='form-control'
-                        type='file'
-                        id='file'
-                        accept='.csv'
-                        onChange={(event) => {
-                          const file = event.target.files[0];
-                          setFile(file);
-                        }}
-                      />
-                    </div>
                   </div>
                 </form>
                 <div className='modal-footer'>
