@@ -42,6 +42,10 @@ a:hover {
   margin-bottom: 5rem;
 }
 
+ul {
+  list-style: none;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -53,10 +57,10 @@ a:hover {
 
 /*adjust the table headers and data*/
 
-table {
-  width: 100%;
-}
+/*table {*/
+/*width: 100%;*/
+/*}*/
 
-td {
-  width: 16.6%;
-}
+/*td {*/
+/*width: 16.6%;*/
+/*}*/

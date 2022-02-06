@@ -7,7 +7,6 @@ const multer = require('multer');
 const Csv = require('../models/csv.model');
 
 // get all csvs
-
 router.get('/', (req, res) => {
   Csv.find()
     .then((csvs) => res.json(csvs))
@@ -15,7 +14,6 @@ router.get('/', (req, res) => {
 });
 
 // create multer object for csv file storage
-
 const imageUpload = multer({
   storage: multer.diskStorage({
     destination: function (req, file, cb) {
@@ -28,7 +26,6 @@ const imageUpload = multer({
 });
 
 // create csv by destructuring for the req body and file properties
-
 router.post('/add', imageUpload.single('file'), async (req, res) => {
   try {
     const { filename, mimetype, size } = req.file;
@@ -49,6 +46,14 @@ router.post('/add', imageUpload.single('file'), async (req, res) => {
   } catch (err) {
     res.status(400).json('Error: ' + err);
   }
+});
+
+//update csv title and description
+router.put('/update/:id', (req, res) => {
+  let updates = req.body; //we set a variable equal to the entire req.body
+  Csv.findOneAndUpdate({ _id: req.params.id }, updates, { new: true })
+    .then((updatedCsv) => res.json(updatedCsv))
+    .catch((err) => res.status(400).json('Error: ' + err));
 });
 
 //delete csv by id

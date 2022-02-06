@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import Axios from 'axios';
 const InputArticle = () => {
   //create a piece of state, and initialize state to `null`
@@ -27,59 +27,148 @@ const InputArticle = () => {
   //only accept .csv files
 
   return (
-    <div>
-      <h2 className='text-center mt-5'>Create File</h2>
-      <form action='#'>
-        <div className='flex'>
-          <label htmlFor='title'>Title</label>
-          <input
-            required
-            className='form-control'
-            type='text'
-            id='title'
-            onChange={(event) => {
-              const { value } = event.target;
-              setTitle(value);
-            }}
-          />
+    <Fragment>
+      <div className='container '>
+        <button
+          type='button'
+          className='btn btn-secondary'
+          data-toggle='modal'
+          data-target='#exampleModal2'
+        >
+          Add New CSV
+        </button>
+
+        <div
+          className='modal fade text-center'
+          id='exampleModal2'
+          tabindex='-1'
+          role='dialog'
+          aria-labelledby='exampleModalLabel'
+          aria-hidden='true'
+        >
+          <div className='modal-dialog' role='document'>
+            <div className='modal-content'>
+              <div className='modal-header'>
+                <h5 className='modal-title' id='exampleModalLabel'>
+                  New CSV Form
+                </h5>
+                <button
+                  type='button'
+                  className='close'
+                  data-dismiss='modal'
+                  aria-label='Close'
+                >
+                  <span aria-hidden='true'>&times;</span>
+                </button>
+              </div>
+              <div className='modal-body'>
+                <form>
+                  <div className='form-group'>
+                    <label htmlFor='title'>Title</label>
+                    <input
+                      required
+                      className='form-control'
+                      type='text'
+                      id='title'
+                      onChange={(event) => {
+                        const { value } = event.target;
+                        setTitle(value);
+                      }}
+                    />
+                  </div>
+                  <div className='form-group'>
+                    <label htmlFor='description'>Description</label>
+                    <input
+                      required
+                      className='form-control'
+                      type='text'
+                      id='description'
+                      onChange={(event) => {
+                        const { value } = event.target;
+                        setDescription(value);
+                      }}
+                    />
+                    <div className='form-group'>
+                      <label htmlFor='file'>File</label>
+                      <input
+                        required
+                        className='form-control'
+                        type='file'
+                        id='file'
+                        accept='.csv'
+                        onChange={(event) => {
+                          const file = event.target.files[0];
+                          setFile(file);
+                        }}
+                      />
+                    </div>
+                  </div>
+                </form>
+                <div className='modal-footer'>
+                  <button
+                    type='button'
+                    className='btn btn-secondary'
+                    data-dismiss='modal'
+                  >
+                    Close
+                  </button>
+                  <button
+                    disabled={!file || !description || !title}
+                    type='button'
+                    className='btn btn-success'
+                    onClick={send}
+                  >
+                    Upload
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className='flex'>
-          <label htmlFor='description'>Description</label>
-          <input
-            required
-            className='form-control'
-            type='text'
-            id='description'
-            onChange={(event) => {
-              const { value } = event.target;
-              setDescription(value);
-            }}
-          />
-        </div>
-        <div className='flex'>
-          <label htmlFor='file'>File</label>
-          <input
-            required
-            className='form-control'
-            type='file'
-            id='file'
-            accept='.csv'
-            onChange={(event) => {
-              const file = event.target.files[0];
-              setFile(file);
-            }}
-          />
-        </div>
-      </form>
-      <button
-        className='btn btn-success mt-4'
-        onClick={send}
-        disabled={!file || !description || !title}
-      >
-        Send
-      </button>
-    </div>
+      </div>
+    </Fragment>
   );
 };
 
 export default InputArticle;
+//<div className='dropdown'>
+//<button
+//type='button'
+//className='btn btn-secondary dropdown-toggle'
+//data-toggle='dropdown'
+//>
+//Upload CSV file
+//</button>
+//<div className='dropdown-menu'>
+//<div className='dropdown-item'>
+//<h2 className='text-center mt-5'>Create File</h2>
+//<form action='#'>
+//<div className='flex'>
+//</div>
+//<div className='flex'>
+//</div>
+//<div className='flex'>
+//<label htmlFor='file'>File</label>
+//<input
+//required
+//className='form-control'
+//type='file'
+//id='file'
+//accept='.csv'
+//onChange={(event) => {
+//const file = event.target.files[0];
+//setFile(file);
+//}}
+///>
+//</div>
+//</form>
+//<button
+//className='btn btn-success mt-4'
+//onClick={send}
+//disabled={!file || !description || !title}
+//>
+//Send
+//</button>
+//</div>
+//</div>
+//</div>
