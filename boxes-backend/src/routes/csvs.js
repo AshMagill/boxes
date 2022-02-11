@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 const imageUpload = multer({
   storage: multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, 'csvs/');
+      cb(null, 'src/csvs/');
     },
     filename: function (req, file, cb) {
       cb(null, file.originalname);

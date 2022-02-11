@@ -19,7 +19,7 @@ app.use(express.json());
 
 // this is the static route for serving files
 
-app.use('/static', express.static('csvs'));
+app.use('/static', express.static('./csvs'));
 
 const uri = process.env.MONGO_URI;
 mongoose.connect(uri);
