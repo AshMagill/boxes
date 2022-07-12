@@ -14,7 +14,7 @@
   <h1 align="center">CSV Boxes</h1>
 
   <p align="center">
-    A simple App for viewing and uploading .csv files, it comes with a Client and a Server. 
+    A simple App for viewing and uploading .csv files using a Mongodb Database, it comes with a Client and a Server. 
     <br />
     <!--<a href="https://raw.githubusercontent.com/AshMagill/Readme/main/images/Pern%20C4%20Diagram.png?token=AQZ3OBXAICRLYNCWHRXRGITAYA4OM"><strong>C4 Diagram »</strong></a>-->
     <!--<br />-->
